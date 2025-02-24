@@ -39,6 +39,7 @@ ORDER BY Cancer_stage Desc
 ```sql
  SELECT AVG(Cigarettes_per_Day) as AvgSmokerCigarettes
  FROM lung_cancer
+ WHERE Smoker = 'Yes'
 ```
 ![Image](https://github.com/user-attachments/assets/3772121e-fb29-41ea-9556-017385b4a834)  
 
