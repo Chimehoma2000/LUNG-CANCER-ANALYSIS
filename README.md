@@ -41,7 +41,9 @@ ORDER BY Cancer_stage Desc
  FROM lung_cancer
  WHERE Smoker = 'Yes'
 ```
-![Image](https://github.com/user-attachments/assets/3772121e-fb29-41ea-9556-017385b4a834)  
+![Image](https://github.com/user-attachments/assets/ae4f6a2c-fe3d-4ade-b9c0-a8d3bc9cd9c7)
+
+
 
 ### 5. Count the number of people exposed to high air pollution.
 
@@ -69,7 +71,7 @@ FROM lung_cancer
 GROUP BY Gender
 ORDER BY Gender
 ```
-![Image](https://github.com/user-attachments/assets/c5fcb860-8a51-47a4-8d80-a0f413ab88e3)
+![Image](https://github.com/user-attachments/assets/ce33bd96-ff1c-475e-8d7f-6e1fedaaba9f)
 
 
 ### 8. Retrieve records of individuals older than 60 who are diagnosed with lung cancer.
