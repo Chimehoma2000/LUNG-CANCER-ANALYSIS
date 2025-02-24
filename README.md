@@ -1,4 +1,7 @@
 ##  <h1 align="center"> LUNG-CANCER-ANALYSIS</h1>
+-----------
+
+# BASIC SECTION
 
 ###  -- 1. Retrieve all records for individuals diagnosed with lung cancer.
 
@@ -75,4 +78,6 @@ FROM lung_cancer
 WHERE Age > 60
 ORDER BY AGE ASC
 ```
-![Image](https://github.com/user-attachments/assets/0cab300d-8b4a-446f-af9a-538e8ffba5f8)
+![Image](https://github.com/user-attachments/assets/0cab300d-8b4a-446f-af9a-538e8ffba5f8)  
+
+# INTERMEDIATE SECTION
