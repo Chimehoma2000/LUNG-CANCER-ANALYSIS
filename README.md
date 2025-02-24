@@ -67,14 +67,7 @@ ORDER BY Gender
 ```
 ![Image](https://github.com/user-attachments/assets/c5fcb860-8a51-47a4-8d80-a0f413ab88e3)
 
-### 7. Count the number of people diagnosed with lung cancer by gender.
-```sql
-SELECT Gender, COUNT (Gender) as Gender_Count
-FROM lung_cancer
-GROUP BY Gender
-ORDER BY Gender
-```
-![Image](https://github.com/user-attachments/assets/c5fcb860-8a51-47a4-8d80-a0f413ab88e3)
+
 ### 8. Retrieve records of individuals older than 60 who are diagnosed with lung cancer.
 ```sql
 SELECT *
