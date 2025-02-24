@@ -78,7 +78,7 @@ ORDER BY Gender
 ```sql
 SELECT *
 FROM lung_cancer
-WHERE Age > 60
+WHERE Age > 60 AND Lung_Cancer_Diagnosis = 'Yes'
 ORDER BY AGE ASC
 ```
 ![Image](https://github.com/user-attachments/assets/0cab300d-8b4a-446f-af9a-538e8ffba5f8)  
