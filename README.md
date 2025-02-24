@@ -1,4 +1,4 @@
-# LUNG-CANCER-ANALYSIS
+##  <h1 align="center"> LUNG-CANCER-ANALYSIS</h1>
 
 ###  -- 1. Retrieve all records for individuals diagnosed with lung cancer.
 
