@@ -125,3 +125,50 @@ ORDER BY Av DESC
 
 # ADVANCED SECTION  
 
+### 1. Identify the correlation between lung cancer prevalence and air pollution levels.
+
+```sql
+SELECT Air_Pollution_Exposure,  AVG(Lung_Cancer_Prevalence_Rate) AS Avg_Prevalence_Rate
+FROM dbo.lung_cancer
+GROUP BY Air_Pollution_Exposure
+```
+![Image](https://github.com/user-attachments/assets/d523fa9f-70ef-486a-a89d-260de92a80b4)
+
+### 2. Find the average age of lung cancer patients for each country. 
+
+```sql
+SELECT Country, AVG(Age) AS Avg_Age
+FROM lung_cancer
+WHERE Lung_Cancer_Diagnosis = 'Yes'
+GROUP BY Country
+```
+![Image](https://github.com/user-attachments/assets/1266122c-5295-412a-bb37-cffc97c03ba8)
+
+###  3. Rank countries based on their mortality rate. 
+```sql
+SELECT Country, Mortality_Rate,
+DENSE_RANK () OVER (ORDER BY Mortality_Rate DESC) AS Rank --Any 2 or more country that has same Mortality rate in digits will belong to same rank 
+FROM lung_cancer
+ORDER BY Mortality_Rate Desc
+```
+![Image](https://github.com/user-attachments/assets/08909f39-c3c0-4430-8e6f-3a09590be0e5)
+
+
+### 4. Compare lung cancer prevalence in men vs. women across countries.
+```sql
+SELECT  Country, Gender, AVG (Lung_Cancer_Prevalence_Rate) AS APR
+from lung_cancer
+GROUP BY Country, Gender
+ORDER BY APR DESC
+```
+![Image](https://github.com/user-attachments/assets/19ba41c7-a466-40cf-bb76-d0a98d17f541)
+
+### 5. Analyze the impact of early detection on survival years.
+
+```sql
+select  Early_Detection,AVG(Survival_Years) AS AVG_Survival_Year
+from lung_cancer
+where Lung_Cancer_Diagnosis = 'Yes'
+GROUP BY Early_Detection
+```
+![Image](https://github.com/user-attachments/assets/97d266bc-9c86-4c4c-9ed3-f4fbe3ad14f1)
