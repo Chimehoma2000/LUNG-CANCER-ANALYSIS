@@ -83,4 +83,45 @@ ORDER BY AGE ASC
 ```
 ![Image](https://github.com/user-attachments/assets/0cab300d-8b4a-446f-af9a-538e8ffba5f8)  
 
-# INTERMEDIATE SECTION
+# INTERMEDIATE SECTION  
+
+### 1. Calculate the average survival years based on cancer stages. 
+```sql
+SELECT Cancer_Stage, AVG(Survival_Years)  AS Avg_Survival_Age
+FROM lung_cancer
+GROUP BY Cancer_Stage
+ORDER BY Avg_Survival_Age DESC
+```
+![Image](https://github.com/user-attachments/assets/c494a6af-f7a5-46cc-b2b7-649d7cb4bcc1)
+
+### 2. Count the number of lung cancer patients based on passive smoking.
+```sql
+
+SELECT Passive_Smoker, COUNT (Passive_Smoker) Passive_Smokers_Count
+FROM lung_cancer
+WHERE Lung_Cancer_Diagnosis = 'Yes'
+GROUP BY Passive_Smoker
+```
+![Image](https://github.com/user-attachments/assets/ce449c5d-61c7-4fd0-bdb7-2828a5aeb1cc)
+
+### 3. Find the country with the highest lung cancer prevalence rate. 
+```sql
+SELECT TOP 1 Country, MAX(Lung_Cancer_Prevalence_Rate) AS MAX
+FROM lung_cancer
+GROUP BY Country 
+ORDER BY MAX Desc
+```
+![Image](https://github.com/user-attachments/assets/c8f25947-7aa4-4aa3-b201-8a0b6eb2cb7a)
+
+### 4. Determine the mortality rate for patients with and without early detection. 
+
+```sql
+SELECT  Early_Detection, AVG(Mortality_Rate) AS Av
+FROM dbo.lung_cancer
+GROUP BY Early_Detection
+ORDER BY Av DESC
+```
+![Image](https://github.com/user-attachments/assets/ecb22e43-a1f7-4ee9-bc60-2cec2541baee)
+
+# ADVANCED SECTION  
+
